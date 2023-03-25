@@ -177,16 +177,16 @@
     display: flex;
     width: 100%;
 }
-.profile-main:nth-child(1){
-    width: 25%;
+.profile-Sidebar{
+    width: 20%;
 
 }
-.profile {
-    width: 55%;
+.profile{
+    width: 80%;
     margin: 0 auto;
     font-family: Arial, sans-serif;
     color: #262626;
-    border: 1px solid red;
+
 }
 
 .profile-header {
@@ -217,6 +217,7 @@
   height: 40px;
   width: 100px;
   border-radius: 5px;
+  border: none;
 }
 
 .profile-stats {
@@ -252,7 +253,7 @@
 .home-sidenav{
     border-right:1px solid grey;
     height: 100vh;
-    width:16%;
+    width:80%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -301,7 +302,6 @@
     display: flex;
     justify-content: space-around;
     width:40%;
-    margin-left: 5%;
     align-items: center;
 }
 .home-side-links >div p, i{

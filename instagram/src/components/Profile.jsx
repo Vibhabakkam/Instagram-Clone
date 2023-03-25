@@ -10,9 +10,11 @@ function Profile() {
         <>
             <div class="profile-main">
 
-                <Sidebar />
+                <div class = "profile-Sidebar">
+                    <Sidebar/>
+                </div>
 
-                {/* <div class="profile">
+                <div class="profile">
 
                     <div class="profile-header">
                         <div class="profile-image">
@@ -41,7 +43,7 @@ function Profile() {
                     <div class="profile-posts">
 
                     </div>
-                </div> */}
+                </div>
             </div>
         </>
     )
