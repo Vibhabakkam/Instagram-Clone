@@ -8,6 +8,7 @@ function Regiater() {
   const [instaUserData, setUserData] = useState({
     name: "",
     email: "",
+    userName: "",
     password: "",
   });
   const router = useNavigate();

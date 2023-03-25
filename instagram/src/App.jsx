@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Regiater from './components/Register';
 import HomePage from './components/HomePage';
 import Login from './components/Login';
+import AddPost from './components/AddPost';
 function App() {
   return (
     <>
@@ -10,8 +11,7 @@ function App() {
         <Routes>
         <Route excat path='/register' element={<Regiater/>} />
         <Route excat path='/login' element={<Login/>} />
-        <Route excat path='/' element={<Login/>} />
-
+        <Route excat path='/addPost' element={<AddPost/>} />
         </Routes>
 
       </div>
