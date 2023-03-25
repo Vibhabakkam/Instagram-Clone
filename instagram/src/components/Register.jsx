@@ -38,7 +38,7 @@ function Regiater() {
       toast.success("Registration done");
     }
   }
-
+ 
   function featchData(e) {
     var value = e.target.value;
     var name = e.target.name;
