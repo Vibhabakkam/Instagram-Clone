@@ -22,7 +22,7 @@ function Login() {
       }
     }
     if (flag) {
-      localStorage.setItem("currentUserR", JSON.stringify(formData.email));
+      localStorage.setItem("instaCurrentUser", JSON.stringify(formData.email));
       setFormData({ email: "", password: "" });
       router("/");
       toast.success("Log in sucessful");
