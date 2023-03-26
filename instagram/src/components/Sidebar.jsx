@@ -1,9 +1,8 @@
-import "./Components.css";
-
-
-function Sidebar(){
-    return(
-        <div className="home-sidenav">
+import "./Sidebar.css";
+function Sidebar() {
+  return (
+    <div className="Side-main">
+      <div className="home-sidenav">
         <div>
           <div>
             <img
@@ -51,6 +50,7 @@ function Sidebar(){
           <p>More</p>
         </div>
       </div>
-    )
+    </div>
+  )
 }
 export default Sidebar;
