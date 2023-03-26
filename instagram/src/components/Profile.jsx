@@ -1,10 +1,8 @@
 import "./Components.css";
 import Sidebar from "./Sidebar";
+import Footer from "./Footer";
 
 function Profile() {
-
-
-
 
     return (
         <>
@@ -21,7 +19,7 @@ function Profile() {
                             <img src="https://media.licdn.com/dms/image/C4E03AQGvXlEYY08elQ/profile-displayphoto-shrink_400_400/0/1631716060825?e=1684972800&v=beta&t=8UWC-9rjY-sC1lgc4Z2GR4XX_IlZpFl6Vps6uZYgvl0" alt="imge" />
                         </div>
                         <div class="profile-info">
-                            <h1 class="profile-username">VibhaBakkam  <button>Edit Profile</button></h1>
+                            <h1 class="profile-username">VibhaBakkam <button>Edit Profile</button> <i class="fa-solid fa-gear"></i></h1>
                             <div class="profile-stats">
                                 <div class="profile-stat">
                                     <span class="profile-stat-count">1,234</span> posts
@@ -45,6 +43,7 @@ function Profile() {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     )
 
