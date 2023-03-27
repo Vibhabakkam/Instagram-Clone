@@ -1,28 +1,44 @@
 import "./Components.css";
 import Sidebar from "./Sidebar";
+import { useEffect, useState } from "react";
 
 
 function HomePage() {
+  const [userPosts, setUserPosts] = useState([]);
+
+  useEffect(() => {
+    const userPostsFromLs = JSON.parse(localStorage.getItem("instaPost")) || [];
+    setUserPosts(userPostsFromLs);
+  }, []);
   return (
     <div id="homePage">
-     
-      
+
       <div className="Sidenav1">
-      <Sidebar/>
+        <Sidebar />
       </div>
-      
+
       <div className="home-content">
-        <div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <div id="home-story">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
         </div>
-        <div className="home-add-content"></div>
+        <div className="home-add-content">
+          <div>
+            {userPosts.map((post, index) => (
+              <div id="map-postHome" key={index}>
+                <h2>{post.username}</h2>
+                <img src={post.image} alt="Post" /><br/>
+                <i class="fa-solid fa-heart"></i><i class="fa-solid fa-share-nodes"></i> <i class="fa-solid fa-comment"></i>
+                <p>{post.caption}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
       <div className="home-suggestions">
         <div className="home-suggestions-top"></div>
@@ -69,18 +85,18 @@ function HomePage() {
             <p>About</p>
             <p>Help</p>
             <p>Press</p>
-            <p>API</p> 
-            <p>Jobs</p> 
+            <p>API</p>
+            <p>Jobs</p>
             <p>Privacy</p>
             <p>Terms</p>
-            <p>Locations</p> 
+            <p>Locations</p>
             <p>Language</p>
-            <p>English</p> 
-            <p>Meta</p> 
-            <p>Verified</p> 
+            <p>English</p>
+            <p>Meta</p>
+            <p>Verified</p>
           </div>
           <div>
-          © 2023 INSTAGRAM FROM META
+            © 2023 INSTAGRAM FROM META
           </div>
         </div>
       </div>
