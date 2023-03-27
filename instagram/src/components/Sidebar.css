@@ -48,6 +48,7 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
+
 .home-side-links >div{
     /* border:1px solid peru; */
     height: 15%;
@@ -58,6 +59,7 @@
 }
 .home-side-links >div p, i{
     font-size: 1.2vw;
+     
 }
 .home-side-links >div:nth-child(5){
     width:55%;
