@@ -1,5 +1,17 @@
 import "./Sidebar.css";
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { toast } from "react-hot-toast";
+
 function Sidebar() {
+  const router = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("instaCurrentUser");
+    toast.success("Logout Successfull")
+    router("/login");
+  }
+
   return (
     <div className="Side-main">
       <div className="home-sidenav">
@@ -13,38 +25,38 @@ function Sidebar() {
           <div className="home-side-links">
             <div>
               <i className="fa-solid fa-house"></i>
-              <p>Home</p>
+              <p><a href="HomePage">Home</a></p>
             </div>
             <div>
               <i class="fa-solid fa-magnifying-glass"></i>
-              <p>Search</p>
+              <p><a href="">Search</a></p>
             </div>
             <div>
               <i class="fa-regular fa-compass"></i>
-              <p>Explore</p>
+              <p><a href="">Explore</a></p>
             </div>
             <div>
               <i class="fa-solid fa-camera-retro"></i>
-              <p>Reels</p>
+              <p><a href="">Reels</a></p>
             </div>
             <div>
               <i class="fa-solid fa-location-arrow"></i>
-              <p>Messages</p>
+              <p><a href="">Messages</a></p>
             </div>
             <div>
               <i class="fa-regular fa-heart"></i>
-              <p>Notification</p>
+              <p><a href="">Notification</a></p>
             </div>
             <div>
               <i class="fa-solid fa-plus"></i>
-              <p>Create</p>
+              <p><a href="Addpost">Create</a></p>
             </div>
             <div>
-              <p>Profile</p>
+              <p><a href="Profile">Profile</a></p>
             </div>
           </div>
         </div>
-
+        <button id="Log-out" onClick={handleLogout}>Logout</button>
         <div>
           <i class="fa-solid fa-bars"></i>
           <p>More</p>
