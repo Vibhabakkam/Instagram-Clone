@@ -37,7 +37,7 @@ function Login() {
       );
       
       setFormData({ email: "", password: "" });
-      router("/");
+      router('/HomePage');
       toast.success("Log in sucessful");
     } else {
       setFormData({ email: "", password: "" });
