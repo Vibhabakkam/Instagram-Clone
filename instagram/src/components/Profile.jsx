@@ -12,21 +12,21 @@ function Profile() {
         username: "",
         useremail: "",
     });
-
-    useEffect(() => {
-        setUserInfo(JSON.parse(localStorage.getItem("instaCurrentUser")));
-        const userPostsFromLs = JSON.parse(localStorage.getItem("instaPost")) || [];
-        const filteredUserPosts = userPostsFromLs.filter(post => post.useremail === userInfo?.currentEmail);
-        setUserPosts(filteredUserPosts);
-    }, [setPost]);
     const [userPosts, setUserPosts] = useState([]);
     const [userInfo, setUserInfo] = useState(JSON.parse(localStorage.getItem("instaCurrentUser")));
 
     useEffect(() => {
+        setUserInfo(JSON.parse(localStorage.getItem("instaCurrentUser")));
         const userPostsFromLs = JSON.parse(localStorage.getItem("instaPost")) || [];
-        const filteredUserPosts = userPostsFromLs.filter(post => post.useremail === userInfo?.currentEmail);
+        const filteredUserPosts = userPostsFromLs.filter(post => post.useremail === userInfo.currentEmail);
         setUserPosts(filteredUserPosts);
-    }, [setPost, userInfo]);
+    }, [setPost]);
+
+    // useEffect(() => {
+    //     const userPostsFromLs = JSON.parse(localStorage.getItem("instaPost")) || [];
+    //     const filteredUserPosts = userPostsFromLs.filter(post => post.useremail === userInfo.currentEmail);
+    //     setUserPosts(filteredUserPosts);
+    // }, [setPost, userInfo]);
 
     return (
         <>
