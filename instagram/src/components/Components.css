@@ -411,9 +411,12 @@
 }
 
 .home-suggestions-top {
-    width: 100%;
+    width: 80%;
     height: 15%;
     border: 1px solid powderblue;
+    margin-top: 50px;
+    margin-left: 50px;
+    text-align: center;
 }
 
 .home-suggestions-mid {
