@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 function HomePage() {
   const [userPosts, setUserPosts] = useState([]);
   const [userStory, setUserStory] = useState([]);
+  const [userInfo, setUserInfo] = useState(JSON.parse(localStorage.getItem("instaCurrentUser")));
 
   useEffect(() => {
     const userPostsFromLs = JSON.parse(localStorage.getItem("instaPost")) || [];
@@ -51,7 +52,7 @@ function HomePage() {
         </div>
       </div>
       <div className="home-suggestions">
-        <div className="home-suggestions-top"></div>
+        <div className="home-suggestions-top"><h1>{userInfo && userInfo["currentUserName"]}</h1></div>
         <div className="home-suggestions-mid">
           <div>
             <p>Suggestions for you</p>
