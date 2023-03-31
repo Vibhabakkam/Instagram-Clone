@@ -25,38 +25,38 @@ function Sidebar() {
           <div className="home-side-links">
             <div>
               <i className="fa-solid fa-house"></i>
-              <p><a href="HomePage">Home</a></p>
+              <p><a id="side-tags" href="HomePage">Home</a></p>
             </div>
             <div>
               <i class="fa-solid fa-magnifying-glass"></i>
-              <p><a href="">Search</a></p>
+              <p><a id="side-tags" href="">Search</a></p>
             </div>
             <div>
               <i class="fa-regular fa-compass"></i>
-              <p><a href="">Explore</a></p>
+              <p><a id="side-tags" href="">Explore</a></p>
             </div>
             <div>
               <i class="fa-solid fa-camera-retro"></i>
-              <p><a href="">Reels</a></p>
+              <p><a id="side-tags" href="">Reels</a></p>
             </div>
             <div>
               <i class="fa-solid fa-location-arrow"></i>
-              <p><a href="">Messages</a></p>
+              <p><a id="side-tags" href="">Messages</a></p>
             </div>
             <div>
               <i class="fa-regular fa-heart"></i>
-              <p><a href="">Notification</a></p>
+              <p><a id="side-tags" href="">Notification</a></p>
             </div>
             <div>
               <i class="fa-solid fa-plus"></i>
-              <p><a href="Addpost">Create</a></p>
+              <p><a id="side-tags" href="Addpost">Create</a></p>
             </div>
             <div>
-              <p><a href="Profile">Profile</a></p>
+              <p><a id="side-tags" href="Profile">Profile</a></p>
             </div>
           </div>
         </div>
-        <button id="Log-out" onClick={handleLogout}>Logout</button>
+        <button id="Log-out" onClick={handleLogout}> <i class="fa-solid fa-user"></i>  Logout</button>
         <div>
           <i class="fa-solid fa-bars"></i>
           <p>More</p>
