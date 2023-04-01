@@ -29,7 +29,7 @@ function Sidebar() {
             </div>
             <div>
               <i class="fa-solid fa-magnifying-glass"></i>
-              <p><a id="side-tags" href="">Search</a></p>
+              <p><a id="side-tags" href="search">Search</a></p>
             </div>
             <div>
               <i class="fa-regular fa-compass"></i>
@@ -41,11 +41,11 @@ function Sidebar() {
             </div>
             <div>
               <i class="fa-solid fa-location-arrow"></i>
-              <p><a id="side-tags">Messages</a></p>
+              <p><a id="side-tags" href="">Messages</a></p>
             </div>
             <div>
               <i class="fa-regular fa-heart"></i>
-              <p><a id="side-tags" >Notification</a></p>
+              <p><a id="side-tags" href="" >Notification</a></p>
             </div>
             <div>
               <i class="fa-solid fa-plus"></i>

@@ -2,18 +2,17 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Components.css";
 
-const SearchPage = (props) => {
-  const route = useNavigate();
+const Search = () => {
   const [people, setpeople] = useState();
   const[showCross, setShowCross] =useState(false);
-  const[propic, setPropic] =useState();
+  
 
   function search(e) {
     // var name= e.target.name;
     var value = e.target.value;
 
     var dataFromLs = JSON.parse(localStorage.getItem("instaUserData"));
-
+     
     for (var i = 0; i < dataFromLs.length; i++) {
       if (
         dataFromLs[i].name.toUpperCase() === value.toUpperCase() ||
@@ -31,8 +30,7 @@ const SearchPage = (props) => {
       var dataFromLs =JSON.parse(localStorage.getItem("instaUserData"));
       for(var i=0; i<dataFromLs.length; i++){
         if(dataFromLs[i].email === currentUser.currentEmail ){
-          // setimage =dataFromLs[i].profileImage
-          setPropic(dataFromLs[i].profileImage)
+          
         }
       }
     }
@@ -49,15 +47,13 @@ const SearchPage = (props) => {
     setShowCross(false);
     setpeople();
   }
-
-
+  
   return (
     <div className="searchbar">
-      <div className="searchbar-right">
         <div>
           <div className="searchbar-search">
             <h1>Search</h1>
-            <div>
+            <div className="searchbar-main">
               <i className="fa-solid fa-magnifying-glass"></i>
               <input
                 type="text"
@@ -73,7 +69,7 @@ const SearchPage = (props) => {
           </div>
         </div>
 
-        <div>
+        <div className="searchbar-result">
           {people && (
             <div>
               <div>
@@ -89,9 +85,9 @@ const SearchPage = (props) => {
           )}
 
         </div>
-      </div>
+      
     </div>
   );
 };
 
-export default SearchPage;
+export default Search;
