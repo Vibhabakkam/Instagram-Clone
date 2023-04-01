@@ -402,6 +402,16 @@
     margin-top: 10px;
     margin-left: -10px;
 }
+#map-postHome>input{
+    height: 50px;
+    width: 600px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 15px;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+}
 #post-icons{
     font-size: 25px;
     color: black;
@@ -546,7 +556,7 @@
     width: 11%;
     height: 100%;
     text-align: center;
-    margin-left: 15px;
+    margin-left: 50px;
 }
 
 .home-content>div:nth-child(1)>div>div>img {
@@ -766,3 +776,4 @@ i {
 .cursor {
     cursor: pointer;
 }
+

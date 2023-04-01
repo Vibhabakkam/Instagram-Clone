@@ -38,6 +38,7 @@ function HomePage() {
               <div key={index}>
                 <img src={spost.image} alt="Post" /><br />
                 <h3>{spost.username}</h3>
+                
               </div>
             ))}
           </div>
@@ -51,8 +52,9 @@ function HomePage() {
                 <h2>{post.username}</h2>
                 <p>Vashi (Navi mumbai)</p>
                 <img src={post.image} alt="Post" /><br />
-                <i id="post-icons" class="fa-solid fa-heart"></i><i id="post-icons" class="fa-solid fa-share-nodes"></i> <i id="post-icons" class="fa-solid fa-comment"></i> <i id="Save-icon" class="fa-regular fa-bookmark"></i>
+                <i id="post-icons" class="fa-regular fa-heart"></i> <i id="post-icons" class="fa-regular fa-paper-plane"></i> <i id="post-icons" class="fa-regular fa-comment"></i> <i id="Save-icon" class="fa-regular fa-bookmark"></i>
                 <p id="post-caption">{post.caption}</p>
+                <input type="text"  placeholder="Add comment"/>
               </div>
             ))}
           </div>

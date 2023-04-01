@@ -62,7 +62,8 @@ function Profile() {
                         {userPosts.map(post => (
                             <div id="map-Post"  key={post.id}>
                                 <img src={post.image} alt="post" />
-                                <i class="fa-solid fa-heart"></i> <i class="fa-solid fa-share-nodes"></i><i class="fa-solid fa-comment"></i>
+                <i id="post-icons" class="fa-regular fa-heart"></i> <i id="post-icons" class="fa-regular fa-paper-plane"></i> <i id="post-icons" class="fa-regular fa-comment"></i>
+                                
                                 <h2>{post.caption}</h2>
                             </div>
                         ))}

@@ -41,22 +41,23 @@ function Sidebar() {
             </div>
             <div>
               <i class="fa-solid fa-location-arrow"></i>
-              <p><a id="side-tags" href="">Messages</a></p>
+              <p><a id="side-tags">Messages</a></p>
             </div>
             <div>
               <i class="fa-regular fa-heart"></i>
-              <p><a id="side-tags" href="">Notification</a></p>
+              <p><a id="side-tags" >Notification</a></p>
             </div>
             <div>
               <i class="fa-solid fa-plus"></i>
               <p><a id="side-tags" href="Addpost">Create</a></p>
             </div>
             <div>
+            <i class="fa-solid fa-user"></i>
               <p><a id="side-tags" href="Profile">Profile</a></p>
             </div>
           </div>
         </div>
-        <button id="Log-out" onClick={handleLogout}> <i class="fa-solid fa-user"></i>  Logout</button>
+        <button id="Log-out" onClick={handleLogout}> <i class="fa-solid fa-right-from-bracket"></i> Logout</button>
         <div>
           <i class="fa-solid fa-bars"></i>
           <p>More</p>
