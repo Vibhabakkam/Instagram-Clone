@@ -6,7 +6,7 @@ import Login from './components/Login';
 import AddPost from './components/AddPost';
 import AddStory from './components/AddStory';
 import Profile from './components/Profile';
-import SearchPage from './components/Search';
+import Search from './components/Search';
 function App() {
   return (
     <>
@@ -18,7 +18,7 @@ function App() {
         <Route excat path='/addStory' element={<AddStory/>}/>
         <Route excat path='/profile' element={<Profile/>}/>
         <Route excat path='/homePage' element={<HomePage/>}/>
-        <Route excat path='/searchPage' element={<SearchPage/>}/>
+        <Route excat path='/search' element={<Search/>}/>
         </Routes>
 
       </div>
