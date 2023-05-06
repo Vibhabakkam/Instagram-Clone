@@ -25,11 +25,11 @@ function Sidebar() {
           <div className="home-side-links">
             <div>
               <i className="fa-solid fa-house"></i>
-              <p><a id="side-tags" href="HomePage">Home</a></p>
+              <p><a id="side-tags" href="./HomePage">Home</a></p>
             </div>
             <div>
               <i class="fa-solid fa-magnifying-glass"></i>
-              <p><a id="side-tags" href="search">Search</a></p>
+              <p><a id="side-tags" href="./Search">Search</a></p>
             </div>
             <div>
               <i class="fa-regular fa-compass"></i>
@@ -49,11 +49,11 @@ function Sidebar() {
             </div>
             <div>
               <i class="fa-solid fa-plus"></i>
-              <p><a id="side-tags" href="Addpost">Create</a></p>
+              <p><a id="side-tags" href="./AddPost">Create</a></p>
             </div>
             <div>
             <i class="fa-solid fa-user"></i>
-              <p><a id="side-tags" href="Profile">Profile</a></p>
+              <p><a id="side-tags" href="./Profile">Profile</a></p>
             </div>
           </div>
         </div>
