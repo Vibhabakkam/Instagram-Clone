@@ -47,7 +47,7 @@ function Sidebar() {
               <i class="fa-regular fa-heart"></i>
               <p><a id="side-tags" href="" >Notification</a></p>
             </div>
-            <div>
+            <div onClick={()=> {router("./AddPost")}}>
               <i class="fa-solid fa-plus"></i>
               <p><a id="side-tags" href="./AddPost">Create</a></p>
             </div>
