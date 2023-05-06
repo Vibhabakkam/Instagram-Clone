@@ -12,12 +12,12 @@ function App() {
     <>
       <div>
         <Routes>
+        <Route excat path='/' element={<HomePage/>}/>
         <Route excat path='/register' element={<Register/>}/>
         <Route excat path='/login' element={<Login/>} />
         <Route excat path='/addPost' element={<AddPost/>} />
         <Route excat path='/addStory' element={<AddStory/>}/>
         <Route excat path='/profile' element={<Profile/>}/>
-        <Route excat path='/homePage' element={<HomePage/>}/>
         <Route excat path='/search' element={<Search/>}/>
         </Routes>
 

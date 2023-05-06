@@ -1,13 +1,24 @@
 import "./Components.css";
 import Footer from "./Footer";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState,useEffect } from "react";
+import { useNavigate  } from "react-router-dom";
 import { toast } from "react-hot-toast";
+import React, { useReducer } from "react";
+import reducer, { initialState } from "../Reducer/reducer";
 
 function Login() {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const router = useNavigate();
-
+  const [state, dispatch] = useReducer(reducer, initialState);
+  const [currentUserName, setCurrentUserName] = useState("");
+  useEffect(() => {
+    const currentUserData = JSON.parse(
+      localStorage.getItem("instaCurrentUser")
+    );
+    if (currentUserData) {
+      setCurrentUserName(currentUserData.currentUserName);
+    }
+  }, []);
 
   function checkLog(e) {
     e.preventDefault();
@@ -15,8 +26,8 @@ function Login() {
     var dataFromLs = JSON.parse(localStorage.getItem("instaUserData"));
 
     var flag = false;
-    var storeName ;
-   
+    var storeName;
+
     for (var i = 0; i < dataFromLs.length; i++) {
       if (
         dataFromLs[i].email === formData.email &&
@@ -26,7 +37,7 @@ function Login() {
         storeName = dataFromLs[i].username;
       }
     }
-   
+
     if (flag) {
       localStorage.setItem(
         "instaCurrentUser",
@@ -35,9 +46,14 @@ function Login() {
           currentUserName: storeName,
         })
       );
-      
+
       setFormData({ email: "", password: "" });
-      router('/HomePage');
+      dispatch({
+        type: "changed_name",
+        nextName: formData.email,
+      });
+      setCurrentUserName(storeName);
+      router("/homePage");
       toast.success("Log in sucessful");
     } else {
       setFormData({ email: "", password: "" });

@@ -776,46 +776,101 @@ i {
 .cursor {
     cursor: pointer;
 }
-.searchbar{
-    margin-top: 50px;
-
-}
-.searchbar-search{
-   
-    height: 100px;
-    width: 800px;
-    margin-left: 500px;
-}
-.searchbar-main{
+#searchbar{
     display: flex;
+    width: 100%;
+}
+#searchbar-left{
+    width: 5%;
+    height: 749px;
+    border:1px solid grey;
+}
+#searchbar-left>div{
+    margin-top: 30px;
+}
+#searchbar-left>div>div{
+    text-align: center;
+}
+#searchbar-left>div>div:nth-child(1)>i{
+    font-size: 24px;
+}
+#searchbar-left>div>div:nth-child(2){
+    margin-top: 25px;
+}
+#searchbar-left>div>div:nth-child(2)>div>i{
     font-size: 20px;
-    height: 50px;
-    width: 400px;
-    background-color: rgb(245, 243, 243);
-    border-radius: 5px;
-    
-    
+    margin-top: 30px;
 }
-.searchbar-main>i{
-    margin-top: 17px;
-
+#searchbar-left>div>div:nth-child(2)>div>img{
+    margin-top: 25px;
 }
-.searchbar-main>input{
-    width: 400px;
-    font-size: 20px;
-    background-color: rgb(245, 243, 243);
-    outline: none;
-    border: none;
-    border-radius: 5px;
+#searchbar-left>div>div:nth-child(3){
+    margin-top: 160px;
 }
-.searchbar-result{
-    width: 50%;
-    height: 100px;
-    margin-left: 500px;
+#searchbar-left>div>div:nth-child(3)>i{
+    font-size: 22px;
+}
+#icon-profile-image>img{
+    height: 26px;
+    width: 26px;
+    border-radius: 13px;
+}
+#searchbar-right{
+    width: 25%;
+    height: 749px;
+    border:1px solid grey;
+}
+#searchbar-right>div{
+    margin-top: 20px;
+}
+#searchbar-right-top{
+    width: 100%;
+    height: 150px;
+    border-bottom: 1px solid grey;
+}
+#searchbar-search>h2{
+    margin-left: 5%;
+}
+#searchbar-search>div{
+    /* border: 1px solid grey; */
+    background-color: #efefef;
+    width: 90%;
+    height: 40px;
+    border-radius: 8px;
+    margin-left: 5%;
     margin-top: 50px;
-    font-size: 25px;
-    
-    
+}
+#searchbar-search>div>i{
+    margin-left: 10px;
+    margin-top: 15px;
+    color: grey;
+    font-size: 13px;
+}
+#searchbar-search>div>input{
+    background-color: #efefef;
+    color: black;
+    margin-left: 5px;
+    margin-top: 10px;
+    font-size: 13px;
+    border: none;
+    outline: none;
+}
+#searchbar-right-bottom{
+    margin-top: 10px;
+    margin-left: 5%;
+}
+#searchbar-right-bottom>p{
+    font-size: 15px;
+    font-weight: 500;
+}
+#searchbar-right-bottom>div{
+    margin-top: 10px;
+}
+#searchbar-right-bottom>div>div{
+    cursor: pointer;
+}
+#searchbar-right-bottom>div>div>p{
+    font-size: 14px;
 }
 
 

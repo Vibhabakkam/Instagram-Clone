@@ -2,12 +2,15 @@ import "./Components.css";
 import Sidebar from "./Sidebar";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import React, { useReducer } from "react";
+import reducer, { initialState } from "../Reducer/reducer";
 
 function HomePage() {
   const router = useNavigate();
   function handleClick() {
     router("/AddStory");
   }
+  const [state, dispatch] = useReducer(reducer, initialState);
   const [userPosts, setUserPosts] = useState([]);
   const [userStory, setUserStory] = useState([]);
   const [userInfo, setUserInfo] = useState(JSON.parse(localStorage.getItem("instaCurrentUser")));
@@ -61,7 +64,7 @@ function HomePage() {
         </div>
       </div>
       <div className="home-suggestions">
-        <div className="home-suggestions-top"><h1>{userInfo && userInfo["currentUserName"]}</h1></div>
+        <div className="home-suggestions-top"><h1>{state.email}</h1></div>
         <div className="home-suggestions-mid">
           <div>
             <p>Suggestions for you</p>
