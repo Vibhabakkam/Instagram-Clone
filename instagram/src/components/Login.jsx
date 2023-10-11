@@ -53,7 +53,7 @@ function Login() {
         nextName: formData.email,
       });
       setCurrentUserName(storeName);
-      router("/homePage");
+      router("/home");
       toast.success("Log in sucessful");
     } else {
       setFormData({ email: "", password: "" });
